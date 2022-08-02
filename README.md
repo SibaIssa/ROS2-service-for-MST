@@ -14,7 +14,7 @@ String «A-C C-E E-B E-H E-D D-F D-G»
   
   
 ## Algorithm:
-  In order to find the MST for a given graph we have used *Kruskal’s Minimum Spanning Tree* algorithm and we used **C++** for coding. for more details about the algorithm you can check this [Link](https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-using-stl-in-c/)
+  In order to find the MST for a given graph we have used **Kruskal’s Minimum Spanning Tree** algorithm and we used **C++** for coding. for more details about the algorithm you can check this [Link](https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-using-stl-in-c/)
 
 ## In order to run the code in your device you can follow the following steps:
   
