@@ -59,7 +59,7 @@ $  ros2 run mst_srvcli server
 ```
 **9- Terminal 2**
 ```
-$  ros2 run mst_srvcli client A B
+$  ros2 run mst_srvcli client
 ```
 **10- Enter the graph**
 ```
