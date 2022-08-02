@@ -49,7 +49,7 @@ $ echo "/home/usr/Task/install/setup.bash" >> ~/.bashrc && echo "source /opt/ros
 ```
 $ sudo docker exec -ti mydocker bash
 ```
-In case of source permission denied use the following
+- In case of source permission denied use the following
 ```
 $ source home/usr/Task/install/setup.bash
 ```
@@ -61,7 +61,7 @@ $  ros2 run mst_srvcli server
 ```
 $  ros2 run mst_srvcli client
 ```
-**10- Enter the graph**
+- Enter the graph
 ```
   A-B A-C B-E E-C E-D E-H D-F D-G G-H #your graph
 ```
