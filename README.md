@@ -1,5 +1,17 @@
 # ROS2-service-for-MST
 ---
+## Description:
+This repository contains a ROS2 service for searching the minimum spanning tree of the graph. The Request message contains string: sequence of edges in form «X-Y», where X and Y are nodes of thegraph. Elements are separated with whitespace.
+Response message contains string with edges of the tree in form «A-B B-C etc.»
+
+example:
+
+Request
+String «A-B A-C B-E E-C E-D E-H D-F D-G G-H»
+
+Response
+String «A-C C-E E-B E-H E-D D-F D-G»
+<h>
 This repository contains a ROS2 service for searching the minimum spanning tree of the graph. In order to run the code on your device you can follow the following steps:
 ---
 ### Pull the following docker if you have ubuntu version 20:
