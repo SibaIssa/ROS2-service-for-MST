@@ -43,7 +43,7 @@ $  colcon build --packages-up-to mst_srvcli
 $ source /home/usr/Task/install/setup.bash && source /opt/ros/foxy/setup.bash
 ```
 ```
-$ echo "/home/usr/Task/install/setup.bash" >> ~/.bashrc && echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
+$ echo "source /home/usr/Task/install/setup.bash" >> ~/.bashrc && echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
 ```
 **7- open another terminals**
 ```
