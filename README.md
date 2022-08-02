@@ -18,7 +18,7 @@ String «A-C C-E E-B E-H E-D D-F D-G»
 
 ## In order to run the code in your device you can follow the following steps:
   
-1. Pull the following docker if you have ubuntu version 20:
+1. Pull ROS2:foxy docker:
 ```
 docker pull osrf/ros:foxy-desktop
 ```
