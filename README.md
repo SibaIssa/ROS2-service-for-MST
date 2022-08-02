@@ -18,50 +18,54 @@ String «A-C C-E E-B E-H E-D D-F D-G»
 
 ## In order to run the code in your device you can follow the following steps:
   
-1. Pull ROS2:foxy docker:
+**1- pull offical docker container for ros2 foxy**
+``` 
+  $  docker pull osrf/ros:foxy-desktop
 ```
-docker pull osrf/ros:foxy-desktop
+**2- download my worksapce**
 ```
-2. Clone this repo into your device:
+$  git clone https://github.com/SibaIssa/ROS2-service-for-MST.git
 ```
-git clone https://github.com/SibaIssa/ROS2-service-for-MST.git
+**3- enter docker**
 ```
-3. Now we need to run our docker and we will name it **mydocker**, and be careful to change the **usr** in the following path with your device's username:
+$  sudo docker run -it -v <dir_to_cloned_repo>/ROS2-service-for-MST/task_ws:/home/usr/Task --name mydocker osrf/ros:foxy-desktop
 ```
-sudo docker run -it -v /home/usr/Task:/home/usr/Task --name mydocker osrf/ros:foxy-desktop
+**4- go to folder**
 ```
-4. Source the */=*.bash** files
+$ cd home/usr/Task
 ```
-source /home/siba/Task/task_ws/install/setup.bash 
+**5- build work space**
 ```
+$  colcon build --packages-up-to mst_srvcli
 ```
-source /opt/ros/foxy/setup.bash
+**6-  source for our terminal and other terminals**
 ```
-5. The following two commands are necessary if you want to execute your docker in more than one terminal so you don't need to source your **.bash** files each time:
-```
-echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
-```
-```
-echo "source /home/siba/Task/task_ws/install/setup.bash ">> ~/.bashrc
-```
-6. Now we are ready to run our **Server**:
-```
-cd /home/usr/Task/task_ws
+$ source /home/usr/Task/install/setup.bash && source /opt/ros/foxy/setup.bash
 ```
 ```
-ros2 run mst_srvcli server
+$ echo "/home/usr/Task/install/setup.bash" >> ~/.bashrc && echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
 ```
-7. Open new terminal, and execute your **mydocker**:
+**7- open another terminals**
 ```
-sudo docker exec -ti mydocker bash
+$ sudo docker exec -ti mydocker bash
 ```
-8. Then run the **Client**:
+In case of source permission denied use the following
 ```
-cd /home/usr/Task/task_ws
+$ source home/usr/Task/install/setup.bash
 ```
+**8- Terminal 1**
 ```
-ros2 run mst_srvcli client
+$  ros2 run mst_srvcli server
 ```
+**9- Terminal 2**
+```
+$  ros2 run mst_srvcli client A B
+```
+**10- Enter the graph**
+```
+  A-B A-C B-E E-C E-D E-H D-F D-G G-H #your graph
+```
+
 ---
 ### note: for any inconvenience you can close the docker by using the following statement, then do the steps again:
 ```
